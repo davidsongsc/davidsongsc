@@ -1,4 +1,3 @@
-
 <h1 align="center">Hi 👋, I'm Davidson George</h1>
 <h3 align="center">Full Stack Developer from Brazil</h3>
 
