@@ -14,6 +14,28 @@
   font-family: "SF Pro Text", Helvetica, sans-serif;
   box-shadow: 1px 1px;
 }
-ul, li{
-    list-style: none;
+ul,
+li {
+  list-style: none;
+}
+
+.perfilImg {
+  width: 135px;
+  border-radius: 50%;
+  background: black;
+  padding: 1px;
+}
+
+.perfil .card-body {
+  top: -100px;
+  position: relative;
+}
+
+.text-center a {
+  padding: 0 15px;
+}
+.text-center .btn {
+  padding: 8px;
+  margin: 5px 0;
+  background-color: black;
 }
