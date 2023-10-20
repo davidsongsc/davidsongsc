@@ -39,3 +39,6 @@ li {
   margin: 5px 0;
   background-color: black;
 }
+.col-12 {
+  width: 100%;
+}

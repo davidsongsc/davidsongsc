@@ -9,7 +9,7 @@ function HomePage() {
       <Row>
         <Col xs={12} sm={6} md={4}>
           <Perfil
-            name="Seu Nome"
+            name="Davidson George"
             profession="Desenvolvedor Front-end"
             description="Desenvolvedor front-end especializado em acessibilidade e
             design responsivo, com experiência na criação de uma aplicação
