@@ -24,7 +24,7 @@
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> 
 
 <a href="https://www.mysql.com" target="_blank" rel="noreferrer"> 
-<img src="https://www.vectorlogo.zone/logos/mysql/mysql-ar21.png" alt="nodejs" width="40" height="40"/> </a> 
+<img src="[https://www.vectorlogo.zone/logos/mysql/mysql-ar21.png](https://www.svgrepo.com/show/303251/mysql-logo.svg)" alt="nodejs" width="40" height="40"/> </a> 
 
 <a href="https://sqlite.org" target="_blank" rel="noreferrer"> 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Sqlite-square-icon.svg/2048px-Sqlite-square-icon.svg.png" alt="nodejs" width="40" height="40"/> </a> 
