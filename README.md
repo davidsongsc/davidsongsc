@@ -5,16 +5,16 @@
   🔭 Atualmente estou trabalhando com React, Next.js, TypeScript, Node.js, Python/Django e PostgreSQL, desenvolvendo aplicações SaaS, interfaces responsivas, integrações complexas e APIs REST estruturadas. Atuo desde a arquitetura do frontend até a implementação do ackend, garantindo performance, segurança e boa experiência do usuário.
 </p>
 
-<p align="center">
+<p align="left">
  🌱 Estudos recentes: aprofundando práticas avançadas de TypeScript, otimização de aplicações Next.js, integrações com gateways de pagamento (como Mercado Pago) e desenvolvimento de APIs robustas com Django REST e Laravel.
 </p>
 
-<p align="center">
+<p align="left">
 🤝 Interesse em colaborar:
 Busco projetos que envolvam desafios reais — desde arquitetura frontend, animações com SVG/Framer Motion, automação de processos, sistemas administrativos, até integrações entre serviços. Se o projeto requer qualidade, escalabilidade e boas práticas, quero participar.
 </p>
 
-<p align="center">
+<p align="left">
 💬 Posso ajudar com:
 React, Next.js, TypeScript, Zustand/Redux, Node.js, Express, Python, Django REST, PHP/Laravel, PostgreSQL, MySQL, Docker e integrações REST.
 </p>
