@@ -1,8 +1,8 @@
 <h1 align="center">Olá 👋, Eu sou Davidson George</h1>
 <h3 align="center">Desenvolvedor Frontend | Atuação Full Stack</h3>
 
-<p align="center">
-  🔭 🔭 Atualmente estou trabalhando com React, Next.js, TypeScript, Node.js, Python/Django e PostgreSQL, desenvolvendo aplicações SaaS, interfaces responsivas, integrações complexas e APIs REST estruturadas. Atuo desde a arquitetura do frontend até a implementação do backend, garantindo performance, segurança e boa experiência do usuário.
+<p align="left">
+  🔭 Atualmente estou trabalhando com React, Next.js, TypeScript, Node.js, Python/Django e PostgreSQL, desenvolvendo aplicações SaaS, interfaces responsivas, integrações complexas e APIs REST estruturadas. Atuo desde a arquitetura do frontend até a implementação do ackend, garantindo performance, segurança e boa experiência do usuário.
 </p>
 
 <p align="center">
