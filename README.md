@@ -120,9 +120,5 @@ React, Next.js, TypeScript, Zustand/Redux, Node.js, Express, Python, Django REST
   <a href="https://prometheus.io" target="_blank">
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/prometheus/prometheus-original.svg" alt="Prometheus" width="40" height="40"/>
   </a>
-  <a href="https://www.zabbix.com" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Zabbix_logo_square.svg/2048px-Zabbix_logo_square.svg.png" alt="Zabbix" width="40" height="40"/>
-  </a>
-
-</p>
+ </p>
 
