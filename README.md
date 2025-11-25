@@ -1,20 +1,22 @@
 <h1 align="center">Olá 👋, Eu sou Davidson George</h1>
-<h3 align="center">Desenvolvedor Full Stack do Brasil</h3>
+<h3 align="center">Desenvolvedor Frontend | Atuação Full Stack</h3>
 
 <p align="center">
-  🔭 Atualmente, estou trabalhando em projetos utilizando <strong>React</strong>, <strong>Python</strong> e <strong>MySQL</strong>, desenvolvendo aplicações robustas que integram front-end e back-end de forma eficaz. Tenho experiência na criação de interfaces de usuário dinâmicas e responsivas, bem como na construção de APIs RESTful e sistemas de banco de dados eficientes.
+  🔭 🔭 Atualmente estou trabalhando com React, Next.js, TypeScript, Node.js, Python/Django e PostgreSQL, desenvolvendo aplicações SaaS, interfaces responsivas, integrações complexas e APIs REST estruturadas. Atuo desde a arquitetura do frontend até a implementação do backend, garantindo performance, segurança e boa experiência do usuário.
 </p>
 
 <p align="center">
-  🌱 Estou sempre em busca de novas oportunidades para expandir meu conhecimento. Recentemente, tenho focado em <strong>TypeScript</strong> para aumentar a segurança e a escalabilidade dos meus projetos, além de explorar o uso de <strong>Django</strong> no desenvolvimento de aplicações web.
+ 🌱 Estudos recentes: aprofundando práticas avançadas de TypeScript, otimização de aplicações Next.js, integrações com gateways de pagamento (como Mercado Pago) e desenvolvimento de APIs robustas com Django REST e Laravel.
 </p>
 
 <p align="center">
-  👯 Estou interessado em colaborar em projetos que desafiem minhas habilidades e me permitam contribuir para soluções inovadoras. Se você tem uma ideia interessante ou precisa de um parceiro de desenvolvimento, entre em contato!
+🤝 Interesse em colaborar:
+Busco projetos que envolvam desafios reais — desde arquitetura frontend, animações com SVG/Framer Motion, automação de processos, sistemas administrativos, até integrações entre serviços. Se o projeto requer qualidade, escalabilidade e boas práticas, quero participar.
 </p>
 
 <p align="center">
-  💬 Sinta-se à vontade para me perguntar sobre <strong>JavaScript</strong>, <strong>React</strong>, <strong>Node.js</strong>, <strong>Python</strong>, <strong>Django</strong> ou qualquer outra tecnologia que você veja listada abaixo. Estou aqui para ajudar e trocar ideias!
+💬 Posso ajudar com:
+React, Next.js, TypeScript, Zustand/Redux, Node.js, Express, Python, Django REST, PHP/Laravel, PostgreSQL, MySQL, Docker e integrações REST.
 </p>
 
 <p align="center">
