@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Cardápio de Drinks — Fichas Técnicas</title>
+<meta name="description" content="Ficha técnica de drinks — pesquisa rápida para mobile" />
+<style>
+  /* MOBILE-FIRST */
+  :root{
+    --bg:#0f1720;
+    --card:#0b1220;
+    --muted:#9aa6b2;
+    --accent:#ff6b6b;
+    --glass:#e6eef2;
+    --glass-dark:#cbd8de;
+    --glass-2:#ffd8a8;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    background:linear-gradient(180deg,#071021 0%, var(--bg) 100%);
+    color:var(--glass);
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    padding:16px;
+    -webkit-tap-highlight-color:transparent;
+  }
+
+  header{
+    display:flex;
+    gap:12px;
+    align-items:center;
+    margin-bottom:14px;
+  }
+  .logo{
+    width:56px;height:56px;
+    border-radius:12px;
+    background:linear-gradient(135deg,var(--accent), #ff9f43);
+    display:flex;align-items:center;justify-content:center;
+    font-weight:700;color:#fff;font-size:20px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.4);
+  }
+  h1{font-size:18px;margin:0}
+  p.lead{margin:0;color:var(--muted);font-size:13px}
+
+  .searchWrap{
+    margin-top:12px;
+    display:flex;
+    gap:8px;
+  }
+  .search{
+    flex:1;
+    display:flex;
+    gap:8px;
+    background:rgba(255,255,255,0.03);
+    padding:8px;
+    border-radius:12px;
+    align-items:center;
+    border:1px solid rgba(255,255,255,0.03);
+  }
+  .search input{
+    background:transparent;border:0;color:var(--glass);outline:0;font-size:15px;width:100%;
+  }
+  .chip{
+    display:inline-flex;
+    gap:6px;align-items:center;
+    background:rgba(255,255,255,0.02);
+    padding:6px 10px;border-radius:999px;font-size:13px;color:var(--muted);
+    border:1px solid rgba(255,255,255,0.02);
+  }
+
+  main{
+    margin-top:14px;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+
+  /* card */
+  .card{
+    background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border-radius:12px;padding:12px;border:1px solid rgba(255,255,255,0.03);
+    box-shadow:0 6px 20px rgba(2,6,23,0.5);
+  }
+  .card-head{
+    display:flex;gap:10px;align-items:center;
+  }
+  .avatar{
+    min-width:56px;height:56px;border-radius:10px;
+    display:flex;align-items:center;justify-content:center;font-weight:700;
+    color:#082; background:linear-gradient(135deg,#2bd39b,#6ee7b7);
+    flex-shrink:0;font-size:14px;
+  }
+  .meta{
+    flex:1;
+  }
+  .meta h2{margin:0;font-size:16px}
+  .meta .sub{font-size:12px;color:var(--muted);margin-top:3px}
+
+  .card-actions{
+    display:flex;gap:8px;align-items:center;margin-left:8px;
+  }
+  .btn{
+    background:transparent;border:1px solid rgba(255,255,255,0.04);
+    padding:8px;border-radius:10px;color:var(--glass);font-size:13px;cursor:pointer;
+  }
+  .btn.ghost{background:transparent}
+  .btn.primary{
+    background:linear-gradient(90deg,var(--accent),#ff9f43);
+    color:#fff;border:0;
+    box-shadow:0 6px 14px rgba(255,107,107,0.12);
+  }
+  .tags{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
+  .tag{font-size:12px;padding:6px 8px;border-radius:999px;background:rgba(255,255,255,0.02);color:var(--muted)}
+
+  .details{
+    margin-top:10px;border-top:1px dashed rgba(255,255,255,0.03);padding-top:10px;display:none;
+    gap:8px;
+  }
+  .details.open{display:grid}
+
+  .row{display:flex;gap:8px;flex-wrap:wrap}
+  .col{flex:1;min-width:120px}
+
+  .ingred{font-size:14px;color:var(--glass-dark);background:rgba(255,255,255,0.02);padding:8px;border-radius:8px}
+  .instr{font-size:13px;color:var(--muted)}
+  .guarn{font-size:13px;color:var(--glass-2);}
+
+  footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
+
+  /* larger screens */
+  @media(min-width:700px){
+    main{grid-template-columns:repeat(2,1fr)}
+  }
+
+  /* subtle input focus */
+  input:focus{box-shadow:0 6px 18px rgba(0,0,0,0.6) inset}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">DS</div>
+  <div>
+    <h1>Ficha Técnica — Drinks</h1>
+    <p class="lead">Pesquisa rápida e interface mobile — toque no card para abrir</p>
+  </div>
+</header>
+
+<section class="searchWrap" aria-label="Busca de drinks">
+  <div class="search" role="search">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity=".6"/></svg>
+    <input id="q" type="search" placeholder="Buscar por nome, ingrediente, copo, guarnição ou técnica" inputmode="search" autocomplete="off" />
+    <button id="clear" class="btn" title="Limpar">✕</button>
+  </div>
+  <button id="favFilter" class="chip" title="Mostrar favoritos">Favoritos</button>
+</section>
+
+<main id="list" aria-live="polite"></main>
+
+<footer>
+  Toque em um card para ver a ficha completa • Favoritos salvos no seu aparelho
+</footer>
+
+<script>
+/* ====== Dados das fichas ====== */
+const DRINKS = [
+  {
+    name:"Madame Surtô",
+    glass:"Taça Vinho Branco",
+    ingredientes:["50 ml destilado (vodka ou gin)","Soda de frutas vermelhas (completar)"],
+    preparo:"Montado, leve mexida",
+    guarnicao:"Espuma de frutas vermelhas, hibisco em pó",
+    notes:"Escolha vodka para perfil mais neutro, gin para um toque botânico."
+  },
+  {
+    name:"Rainha",
+    glass:"Taça Vivet",
+    ingredientes:["100 ml de morango (na taça)","Gelo (completar)","50 ml destilado (vodka ou rum)","20 ml amarula","30 ml leite condensado"],
+    preparo:"Wet shake, coagem simples",
+    guarnicao:"Espuma de gengibre"
+  },
+  {
+    name:"Amnésia",
+    glass:"Taça Hurricane",
+    ingredientes:["40 ml vodka","25 ml xarope de toranja","75 ml chá de capim santo","20 ml água tônica (completar após coagem)"],
+    preparo:"Wet shake, coagem simples",
+    guarnicao:"Espuma de gengibre e capim santo"
+  },
+  {
+    name:"Delirante",
+    glass:"Taça Vivet",
+    ingredientes:["50 ml destilado (vodka ou gin)","20 ml limão siciliano","20 ml xarope de frutas vermelhas","90 ml abacaxi"],
+    preparo:"Reverse Dry Shake, coagem dupla",
+    guarnicao:"Broto de hortelã"
+  },
+  {
+    name:"Sanatório",
+    glass:"Taça Hurricane",
+    ingredientes:["40 ml vodka","40 ml lemoncello","20 ml curaçau blue","20 ml limão taiti","água com gás (completar)","5-10 ml grenadine (na taça depois de servir)"],
+    preparo:"Wet Shake, coagem simples",
+    guarnicao:"Leque de limão siciliano e hortelã"
+  },
+  {
+    name:"Majestade",
+    glass:"Taça Baloon Snifter",
+    ingredientes:["50 ml vodka","Soda de frutas amarelas (completar)"],
+    preparo:"Montado, leve mexida",
+    guarnicao:"Espuma de gengibre, canela em pó e manjericão"
+  },
+  {
+    name:"Gin Tônica",
+    glass:"Taça Gin de acrílico",
+    ingredientes:["60 ml London Dry Gin","150 ml água tônica"],
+    preparo:"Montado, leve mexida",
+    guarnicao:"Leque de limão siciliano, ramo de alecrim"
+  },
+  {
+    name:"Cosmopolitan",
+    glass:"Taça Martini",
+    ingredientes:["40 ml vodka","15 ml triple sec","15 ml limão taiti","30 ml suco de cranberry"],
+    preparo:"Wet Shake, dupla coagem",
+    guarnicao:"Zest twist de limão siciliano"
+  },
+  {
+    name:"Mojito",
+    glass:"Copo Ilhabella longo ou Americano longo",
+    ingredientes:["12-16 folhas de hortelã médias","45 ml rum blanco","20 ml limão taiti","20 ml xarope de açúcar","Água com gás (completar)"],
+    preparo:"Montado, maceração leve na hortelã, leve mexida",
+    guarnicao:"Neve de gelo, hortelã, fatia de limão e 2 dashes de bitter angostura"
+  },
+  {
+    name:"Fitzgerald",
+    glass:"Copo on the rocks",
+    ingredientes:["60 ml London Dry Gin","25 ml limão siciliano","25 ml xarope de açúcar","2 dashes bitter angostura"],
+    preparo:"Mexido, coagem simples",
+    guarnicao:"Zest de limão siciliano e 1 dash de bitter angostura"
+  },
+  {
+    name:"Margarita",
+    glass:"Taça Martini",
+    ingredientes:["50 ml tequila blanca","20 ml triple sec","15 ml limão taiti"],
+    preparo:"Wet shake, dupla coagem",
+    guarnicao:"Meia borda de sal"
+  },
+  {
+    name:"Old Fashioned",
+    glass:"Copo On The Rocks",
+    ingredientes:["45 ml whisky (Bourbon ou Rye)","20 ml xarope de açúcar","4 dashes bitter angostura"],
+    preparo:"Montado, leve mexida",
+    guarnicao:"Fatia de laranja e cereja no palito"
+  },
+  {
+    name:"Sex on The Beach",
+    glass:"Taça Hurricane",
+    ingredientes:["45 ml vodka","20 ml licor de pêssego","60 ml suco de laranja","15 ml grenadine"],
+    preparo:"Montado, leve mexida",
+    guarnicao:"Meia lua de laranja"
+  },
+  {
+    name:"Pina Colada",
+    glass:"Taça Hurricane",
+    ingredientes:["45 ml rum blanco","50 ml suco de abacaxi","100 ml pre-batch de leite de coco e leite condensado"],
+    preparo:"Wet Shake, coagem simples",
+    guarnicao:"Borda de coco ralado"
+  },
+  {
+    name:"Whisky Sour",
+    glass:"(Copo a gosto)",
+    ingredientes:["45 ml whisky (Bourbon)","25 ml limão taiti","20 ml xarope de açúcar","Clara de 1 ovo"],
+    preparo:"Reverse dry shake, dupla coagem",
+    guarnicao:"Limão espetado"
+  },
+  {
+    name:"Moscow Mule",
+    glass:"Caneca de cobre",
+    ingredientes:["60 ml vodka","25 ml limão","Soda de gengibre (completar)"],
+    preparo:"Montado, leve mexida",
+    guarnicao:"Hortelã e limão"
+  },
+  {
+    name:"Campari Tonic",
+    glass:"Taça gin de vidro",
+    ingredientes:["50 ml Campari","150 ml tônica"],
+    preparo:"Montado, leve mexida",
+    guarnicao:"Zest de laranja"
+  },
+  {
+    name:"Negroni",
+    glass:"Copo On The Rocks",
+    ingredientes:["30 ml London Dry Gin","30 ml Campari","30 ml vermouth rosso"],
+    preparo:"Mexido, coagem simples",
+    guarnicao:"Zest de laranja"
+  },
+  {
+    name:"Dry Martini",
+    glass:"Taça Martini",
+    ingredientes:["60 ml London Dry Gin","10 ml vermouth extra dry"],
+    preparo:"Mexido, coagem dupla",
+    guarnicao:"Palito com 2 azeitonas"
+  },
+  {
+    name:"Red Highball",
+    glass:"Copo Ilhabella",
+    ingredientes:["50 ml Whisky (Scotch Red Label)","25 ml água de coco","Completar com água tônica"],
+    preparo:"Montado, leve mexida",
+    guarnicao:"Meia lua de laranja"
+  },
+  {
+    name:"Aperol Spritz",
+    glass:"Taça Aperol",
+    ingredientes:["100 ml espumante prosecco","100 ml Aperol","40 ml água com gás"],
+    preparo:"Montado, na ordem dos ingredientes, leve mexida",
+    guarnicao:"2 meias luas de laranja"
+  }
+];
+
+/* ====== Renderização e busca ====== */
+const listEl = document.getElementById('list');
+const qEl = document.getElementById('q');
+const clearBtn = document.getElementById('clear');
+const favFilterBtn = document.getElementById('favFilter');
+
+let favorites = JSON.parse(localStorage.getItem('fav_drinks_v1') || "[]");
+let showOnlyFavs = false;
+
+function saveFavs(){
+  localStorage.setItem('fav_drinks_v1', JSON.stringify(favorites));
+}
+
+function isFav(name){ return favorites.includes(name); }
+function toggleFav(name){
+  if(isFav(name)) favorites = favorites.filter(n=>n!==name);
+  else favorites.push(name);
+  saveFavs();
+  render(currentQuery);
+}
+
+/* create card html */
+function makeCard(d){
+  const fav = isFav(d.name);
+  const card = document.createElement('article');
+  card.className = 'card';
+  card.setAttribute('tabindex','0');
+
+  card.innerHTML = `
+    <div class="card-head">
+      <div class="avatar" aria-hidden>${d.name.split(' ').map(s=>s[0]).slice(0,2).join('')}</div>
+      <div class="meta">
+        <h2>${d.name}</h2>
+        <div class="sub">${d.glass} • <span style="color:var(--muted)">${d.preparo}</span></div>
+        <div class="tags">
+          ${d.ingredientes.slice(0,3).map(i=>`<span class="tag">${i}</span>`).join('')}
+        </div>
+      </div>
+      <div class="card-actions">
+        <button class="btn" data-action="copy" title="Copiar receita">📋</button>
+        <button class="btn ${fav? 'primary':''}" data-action="fav" title="Favoritar">${fav? '★':'☆'}</button>
+        <button class="btn" data-action="open" title="Abrir/Fechar">⌄</button>
+      </div>
+    </div>
+
+    <div class="details" aria-hidden="true">
+      <div class="row">
+        <div class="col ingred"><strong>Ingredientes</strong><br>${d.ingredientes.map(i=>`<div>${i}</div>`).join('')}</div>
+        <div class="col instr"><strong>Preparo</strong><br>${escapeHtml(d.preparo)}<br>${d.notes? `<small style="color:var(--muted)">${escapeHtml(d.notes)}</small>`: ''}</div>
+      </div>
+      <div style="margin-top:8px;display:flex;gap:8px;align-items:center;justify-content:space-between">
+        <div class="guarn"><strong>Guarnição</strong><br>${d.guarnicao || '—'}</div>
+        <div style="display:flex;gap:8px">
+          <button class="btn" data-action="copy">Copiar</button>
+          <button class="btn" data-action="share">Compartilhar</button>
+          <button class="btn" data-action="fav">${isFav(d.name)?'Remover':'Favoritar'}</button>
+        </div>
+      </div>
+    </div>
+  `;
+
+  // actions
+  card.querySelectorAll('[data-action]').forEach(btn=>{
+    btn.addEventListener('click', (e)=>{
+      e.stopPropagation();
+      const act = btn.getAttribute('data-action');
+      if(act==='open'){ toggleDetails(card); }
+      if(act==='fav'){ toggleFav(d.name); }
+      if(act==='copy'){ copyText(formatRecipe(d)); btn.textContent='✔'; setTimeout(()=>btn.textContent='📋',900); }
+      if(act==='share'){ shareRecipe(d); }
+    });
+  });
+
+  // toggle on card click / keyboard
+  card.addEventListener('click', ()=> toggleDetails(card));
+  card.addEventListener('keypress', (ev)=>{ if(ev.key==='Enter') toggleDetails(card) });
+
+  return card;
+}
+
+function toggleDetails(card){
+  const det = card.querySelector('.details');
+  const isOpen = det.classList.contains('open');
+  det.classList.toggle('open', !isOpen);
+  det.setAttribute('aria-hidden', isOpen ? 'true' : 'false');
+}
+
+/* format recipe text */
+function formatRecipe(d){
+  return `${d.name}\nCopo: ${d.glass}\n\nIngredientes:\n- ${d.ingredientes.join('\n- ')}\n\nPreparo: ${d.preparo}\nGuarnição: ${d.guarnicao || '—'}${d.notes? '\nNotas: '+d.notes : ''}`;
+}
+
+/* copy util */
+function copyText(text){
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).catch(()=> fallbackCopy(text));
+  } else fallbackCopy(text);
+}
+function fallbackCopy(text){
+  const ta = document.createElement('textarea');
+  ta.value=text;document.body.appendChild(ta);ta.select();
+  try{ document.execCommand('copy'); }catch(e){}
+  ta.remove();
+}
+
+/* share util (mobile) */
+function shareRecipe(d){
+  const txt = formatRecipe(d);
+  if(navigator.share){
+    navigator.share({title:d.name,text:txt}).catch(()=>copyText(txt));
+  } else copyText(txt);
+}
+
+/* escape little html in notes */
+function escapeHtml(s=''){ return s.replace(/[&<>"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch])) }
+
+/* render list filtered by query */
+let currentQuery = '';
+function render(q=''){
+  currentQuery = q;
+  listEl.innerHTML='';
+  const ql = q.trim().toLowerCase();
+
+  let results = DRINKS.filter(d=>{
+    if(showOnlyFavs && !isFav(d.name)) return false;
+    if(!ql) return true;
+    // search fields: name, ingredientes, glass, guarnicao, preparo
+    const hay = [
+      d.name, d.glass, d.preparo, d.guarnicao || '',
+      (d.ingredientes||[]).join(' ')
+    ].join(' ').toLowerCase();
+    return hay.includes(ql);
+  });
+
+  if(results.length===0){
+    const empty = document.createElement('div');
+    empty.className='card';
+    empty.innerHTML = `<div style="text-align:center;color:var(--muted)">Nenhum drink encontrado para "<strong>${escapeHtml(q)}</strong>".</div>`;
+    listEl.appendChild(empty);
+    return;
+  }
+
+  results.forEach(d=>{
+    listEl.appendChild(makeCard(d));
+  });
+}
+
+/* quick helpers */
+qEl.addEventListener('input', (e)=> render(e.target.value));
+clearBtn.addEventListener('click', ()=> { qEl.value=''; qEl.focus(); render(''); });
+favFilterBtn.addEventListener('click', ()=>{
+  showOnlyFavs = !showOnlyFavs;
+  favFilterBtn.style.background = showOnlyFavs ? 'linear-gradient(90deg,var(--accent),#ff9f43)' : '';
+  favFilterBtn.style.color = showOnlyFavs ? '#fff' : '';
+  render(currentQuery);
+});
+
+/* initial render */
+render();
+
+/* keyboard: "/" to focus search */
+window.addEventListener('keydown', (e)=>{
+  if(e.key==='/' && document.activeElement.tagName.toLowerCase()!=='input'){
+    e.preventDefault(); qEl.focus(); qEl.select();
+  }
+});
+
+/* small accessibility: announce count */
+function announceCount(){
+  const count = listEl.children.length;
+  listEl.setAttribute('aria-label', `${count} drinks listados`);
+}
+const obs = new MutationObserver(announceCount);
+obs.observe(listEl,{childList:true});
+
+/* initial announce */
+announceCount();
+</script>
+</body>
+</html>
