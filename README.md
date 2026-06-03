@@ -59,7 +59,9 @@ Java 21, Spring Boot, Spring Security, Spring Data JPA, Apache Kafka, Apache Cam
   </a>
 
   <!-- BACKEND -->
+  <a href="https://www.oracle.com" target="_blank">
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="Java" width="40" height="40"/>
+      </a>
   <a href="https://nodejs.org" target="_blank">
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" alt="Node.js" width="40" height="40"/>
   </a>
