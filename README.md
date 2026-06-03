@@ -1,28 +1,33 @@
-<h1 align="center">Olá 👋, Eu sou Davidson George</h1>
-<h3 align="center">Desenvolvedor Frontend | Atuação Full Stack</h3>
+🔭 Atualmente trabalho com React, Next.js, TypeScript, Node.js, Python/Django, PHP/Laravel e PostgreSQL, desenvolvendo aplicações SaaS, interfaces responsivas, integrações complexas e APIs REST escaláveis. Atuo desde a arquitetura do frontend até a implementação do backend, com foco em performance, segurança, observabilidade e experiência do usuário.
 
-<p align="left">
-  🔭 Atualmente estou trabalhando com React, Next.js, TypeScript, Node.js, Python/Django e PostgreSQL, desenvolvendo aplicações SaaS, interfaces responsivas, integrações complexas e APIs REST estruturadas. Atuo desde a arquitetura do frontend até a implementação do ackend, garantindo performance, segurança e boa experiência do usuário.
-</p>
+🌱 Estudos recentes:
+Aprofundando conhecimentos em Java 21, Spring Boot, Spring Security, Apache Kafka, mensageria assíncrona, microsserviços, Docker, arquitetura orientada a eventos, otimização de aplicações Next.js, integrações com gateways de pagamento (Mercado Pago) e desenvolvimento de APIs robustas com Django REST e Laravel.
 
-<p align="left">
- 🌱 Estudos recentes: aprofundando práticas avançadas de TypeScript, otimização de aplicações Next.js, integrações com gateways de pagamento (como Mercado Pago) e desenvolvimento de APIs robustas com Django REST e Laravel.
-</p>
-
-<p align="left">
 🤝 Interesse em colaborar:
-Busco projetos que envolvam desafios reais — desde arquitetura frontend, animações com SVG/Framer Motion, automação de processos, sistemas administrativos, até integrações entre serviços. Se o projeto requer qualidade, escalabilidade e boas práticas, quero participar.
-</p>
 
-<p align="left">
+Busco projetos que envolvam desafios reais — arquitetura frontend e backend, microsserviços, automação de processos, sistemas administrativos, plataformas SaaS, observabilidade, mensageria e integrações entre serviços. Tenho interesse especial em soluções escaláveis, ambientes distribuídos e boas práticas de engenharia de software.
+
 💬 Posso ajudar com:
-React, Next.js, TypeScript, Zustand/Redux, Node.js, Express, Python, Django REST, PHP/Laravel, PostgreSQL, MySQL, Docker e integrações REST.
-</p>
 
-<p align="center">
-  📫 Como me encontrar: <a href="mailto:davidsongsc@gmail.com">davidsongsc@gmail.com | 📞 <a href="tel:+5521978525380">+55 (21) 97852-5380</a>
-  
-</p>
+Frontend:
+React, Next.js, TypeScript, JavaScript, Zustand, Redux, Tailwind CSS, Material UI, Framer Motion.
+
+Backend:
+Node.js, Express, Python, Django REST Framework, PHP, Laravel, APIs REST, autenticação JWT, cookies HttpOnly, integrações de terceiros.
+
+Banco de Dados:
+PostgreSQL, MySQL, SQLite, MongoDB.
+
+DevOps e Infra:
+Docker, Git, GitHub, GitLab, CI/CD, Terraform, Ansible, Prometheus.
+
+Estudando e evoluindo:
+Java 21, Spring Boot, Spring Security, Spring Data JPA, Apache Kafka, Apache Camel, Quarkus, Microsserviços e Arquitetura Orientada a Eventos.
+
+📫 Como me encontrar:
+
+📧 davidsongsc@gmail.com
+📱 +55 (21) 97852-5380
 
 <h3 align="center">Linguagens e Ferramentas:</h3>
 <p align="center">
@@ -54,6 +59,7 @@ React, Next.js, TypeScript, Zustand/Redux, Node.js, Express, Python, Django REST
   </a>
 
   <!-- BACKEND -->
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="Java" width="40" height="40"/>
   <a href="https://nodejs.org" target="_blank">
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" alt="Node.js" width="40" height="40"/>
   </a>
